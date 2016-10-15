@@ -12,7 +12,10 @@
 
 ActiveRecord::Schema.define(version: 20161014015138) do
 
-  create_table "tokimons", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
+  create_table "tokimons", force: :cascade do |t|
     t.string   "name"
     t.integer  "weight"
     t.integer  "height"
@@ -28,7 +31,7 @@ ActiveRecord::Schema.define(version: 20161014015138) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "trainers", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+  create_table "trainers", force: :cascade do |t|
     t.integer  "level"
     t.string   "name"
     t.integer  "tokimon_id"
