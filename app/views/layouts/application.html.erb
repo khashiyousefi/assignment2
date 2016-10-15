@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Assignment2</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+  <div class= "myclass">
+  <div class = "layer">
+  <body>
+    <%= link_to "Home", demo_index_path =%>
+    <%= link_to "Trainers", trainers_path =%>
+    <%= link_to "Tokimons", tokimons_path =%>
+    <%= yield %>
+  </body>
+</div>
+</div>
+</html>
